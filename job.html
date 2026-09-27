@@ -1,0 +1,538 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OT Inventory System</title>
+
+    <link rel="stylesheet" href="style5.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="header-content">
+            <h1>OT Inventory System</h1>
+            <p>Operating Theatre Stock Management</p>
+        </div>
+
+    </header>
+
+
+    <!-- Main -->
+    <main class="main">
+
+
+        <!-- User Information -->
+        <section class="user-section">
+
+            <div class="user-info">
+
+                <!-- <p>
+                    <span>Role:</span>
+                    Morning Checker
+                </p> -->
+
+                <div class="room-select">
+                    <label for="userRole">Role</label>
+                    <select id="userRole">
+                        <option value="morning">Morning Checker</option>
+                        <option value="afternoon">Afternoon Checker</option>
+                    </select>
+                </div>
+                 <div class="Date-select">
+        <label for="checkDate">Select Date</label>
+        <input type="date" id="checkDate" name="checkDate">
+    </div>
+
+               
+            </div>
+
+        </section>
+
+
+        <!-- OR Room Selection -->
+        <section class="room-section">
+
+            <div class="section-title">
+
+                <h2>Select OR Room</h2>
+
+                <p>
+                    Choose the operating room you want to check.
+                </p>
+
+            </div>
+
+
+            <div class="room-select">
+
+                <label for="orRoom">OR Room</label>
+
+                <select id="orRoom" name="orRoom">
+
+                    <option value="">-- Select OR Room --</option>
+
+                    <option value="OR01">OR 01</option>
+                    <option value="OR02">OR 02</option>
+                    <option value="OR03">OR 03</option>
+                    <option value="OR04">OR 04</option>
+                    <option value="OR05">OR 05</option>
+                    <option value="OR06">OR 06</option>
+                    <option value="OR07">OR 07</option>
+                    <option value="OR08">OR 08</option>
+                    <option value="OR09">OR 09</option>
+                    <option value="OR10">OR 10</option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Inventory Checklist -->
+        <section class="inventory-section">
+
+            <div class="section-title">
+
+                <h2>Inventory Checklist</h2>
+
+                <p>
+                    Check the stock and enter the quantity needed.
+                </p>
+
+            </div>
+
+
+
+            <!-- Item Table -->
+            <div class="inventory-table">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>No.</th>
+                            <th>Item Name</th>
+                            <th>Category</th>
+                            <th>Par Level</th>
+                            <th>Need</th>
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+
+                        <!-- Item 01 -->
+                        <tr>
+
+                            <td>01</td>
+
+                            <td>Surgical Gloves</td>
+
+                            <td>Consumable</td>
+
+                            <td>
+                                <strong>10</strong>
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    name="need-01"
+                                    id="need-01"
+                                    min="0"
+                                    placeholder="0"
+                                >
+                            </td>
+
+                            <td>
+                                <span class="status pending">
+                                    Pending
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Item 02 -->
+                        <tr>
+
+                            <td>02</td>
+
+                            <td>10ml Syringe</td>
+
+                            <td>Consumable</td>
+
+                            <td>
+                                <strong>20</strong>
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    name="need-02"
+                                    id="need-02"
+                                    min="0"
+                                    placeholder="0"
+                                >
+                            </td>
+
+                            <td>
+                                <span class="status pending">
+                                    Pending
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Item 03 -->
+                        <tr>
+
+                            <td>03</td>
+
+                            <td>Gauze</td>
+
+                            <td>Consumable</td>
+
+                            <td>
+                                <strong>30</strong>
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    name="need-03"
+                                    id="need-03"
+                                    min="0"
+                                    placeholder="0"
+                                >
+                            </td>
+
+                            <td>
+                                <span class="status pending">
+                                    Pending
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Item 04 -->
+                        <tr>
+
+                            <td>04</td>
+
+                            <td>Surgical Mask</td>
+
+                            <td>Consumable</td>
+
+                            <td>
+                                <strong>50</strong>
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    name="need-04"
+                                    id="need-04"
+                                    min="0"
+                                    placeholder="0"
+                                >
+                            </td>
+
+                            <td>
+                                <span class="status pending">
+                                    Pending
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Item 05 -->
+                        <tr>
+
+                            <td>05</td>
+
+                            <td>Alcohol Swab</td>
+
+                            <td>Consumable</td>
+
+                            <td>
+                                <strong>100</strong>
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    name="need-05"
+                                    id="need-05"
+                                    min="0"
+                                    placeholder="0"
+                                >
+                            </td>
+
+                            <td>
+                                <span class="status pending">
+                                    Pending
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Item 06 -->
+                        <tr>
+
+                            <td>06</td>
+
+                            <td>Dressing Pack</td>
+
+                            <td>Consumable</td>
+
+                            <td>
+                                <strong>15</strong>
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    name="need-06"
+                                    id="need-06"
+                                    min="0"
+                                    placeholder="0"
+                                >
+                            </td>
+
+                            <td>
+                                <span class="status pending">
+                                    Pending
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Item 07 -->
+                        <tr>
+
+                            <td>07</td>
+
+                            <td>IV Set</td>
+
+                            <td>Consumable</td>
+
+                            <td>
+                                <strong>20</strong>
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    name="need-07"
+                                    id="need-07"
+                                    min="0"
+                                    placeholder="0"
+                                >
+                            </td>
+
+                            <td>
+                                <span class="status pending">
+                                    Pending
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Item 08 -->
+                        <tr>
+
+                            <td>08</td>
+
+                            <td>20ml Syringe</td>
+
+                            <td>Consumable</td>
+
+                            <td>
+                                <strong>20</strong>
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    name="need-08"
+                                    id="need-08"
+                                    min="0"
+                                    placeholder="0"
+                                >
+                            </td>
+
+                            <td>
+                                <span class="status pending">
+                                    Pending
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Item 09 -->
+                        <tr>
+
+                            <td>09</td>
+
+                            <td>Kidney Dish</td>
+
+                            <td>Equipment</td>
+
+                            <td>
+                                <strong>5</strong>
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    name="need-09"
+                                    id="need-09"
+                                    min="0"
+                                    placeholder="0"
+                                >
+                            </td>
+
+                            <td>
+                                <span class="status pending">
+                                    Pending
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+
+                        <!-- Item 10 -->
+                        <tr>
+
+                            <td>10</td>
+
+                            <td>Surgical Gown</td>
+
+                            <td>Linen</td>
+
+                            <td>
+                                <strong>15</strong>
+                            </td>
+
+                            <td>
+                                <input
+                                    type="number"
+                                    name="need-10"
+                                    id="need-10"
+                                    min="0"
+                                    placeholder="0"
+                                >
+                            </td>
+
+                            <td>
+                                <span class="status pending">
+                                    Pending
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+
+            <!-- Notes -->
+            <div class="notes-section">
+
+                <label for="notes">Notes</label>
+
+                <textarea
+                    id="notes"
+                    name="notes"
+                    rows="4"
+                    placeholder="Enter any additional information..."
+                ></textarea>
+
+            </div>
+
+
+
+            <!-- Submit Button -->
+            <div class="action-section">
+
+                <button
+                    type="button"
+                    class="submit-btn"
+                    id="submitStock"
+                >
+                    Submit Stock Check
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+        <section id="afternoonView" style="display: none;">
+            <h2>Afternoon HCA</h2>
+            <p>Restock Checklist</p>
+        </section>
+
+
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <p>OT Inventory System</p>
+
+        <
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    
+   
+    
+
+</body>
+
+</html>

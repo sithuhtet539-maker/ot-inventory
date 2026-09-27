@@ -1,0 +1,570 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    background: #102c50;
+    color: white;
+    padding: 25px 40px;
+}
+
+.header-content {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    font-size: 14px;
+    color: #cbd5e1;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.main {
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 0 30px;
+}
+
+
+/* =========================
+   USER INFORMATION
+========================= */
+
+.user-section {
+    background: white;
+    padding: 20px 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.user-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.user-info p {
+    font-size: 15px;
+}
+
+.user-info span {
+    color: #64748b;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.user-info strong {
+    color: #102c50;
+}
+
+
+/* =========================
+   ROOM SECTION
+========================= */
+
+.room-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+.section-title {
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+    font-size: 22px;
+    color: #102c50;
+    margin-bottom: 5px;
+}
+
+.section-title p {
+    font-size: 14px;
+    color: #64748b;
+}
+
+
+/* =========================
+   ROOM SELECT
+========================= */
+
+.room-select {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 350px;
+}
+
+.room-select label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.room-select select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: white;
+    font-size: 15px;
+    color: #1e293b;
+    cursor: pointer;
+    outline: none;
+}
+
+.room-select select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================
+   INVENTORY SECTION
+========================= */
+
+.inventory-section {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   INVENTORY TABLE
+========================= */
+
+.inventory-table {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+}
+
+thead {
+    background: #102c50;
+    color: white;
+}
+
+th {
+    padding: 15px 12px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+td {
+    padding: 13px 12px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 14px;
+}
+
+tbody tr {
+    transition: background 0.2s;
+}
+
+tbody tr:hover {
+    background: #f1f5f9;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+td strong {
+    color: #102c50;
+    font-size: 15px;
+}
+
+
+/* =========================
+   NEED INPUT
+========================= */
+
+td input[type="number"] {
+    width: 90px;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+    text-align: center;
+    outline: none;
+    background: #f8fafc;
+}
+
+td input[type="number"]:focus {
+    border-color: #2563eb;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status.pending {
+    background: #fff7ed;
+    color: #c2410c;
+}
+
+
+/* =========================
+   NOTES
+========================= */
+
+.notes-section {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notes-section label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.notes-section textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    resize: vertical;
+    outline: none;
+    background: #f8fafc;
+}
+
+.notes-section textarea:focus {
+    border-color: #2563eb;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+
+.action-section {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+.submit-btn {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.submit-btn:hover {
+    background: #1d4ed8;
+}
+
+.submit-btn:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: #102c50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer p {
+    font-size: 13px;
+    color: #cbd5e1;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 20px;
+    }
+
+    .header h1 {
+        font-size: 23px;
+    }
+
+    .main {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    .user-section,
+    .room-section,
+    .inventory-section {
+        padding: 20px 15px;
+    }
+
+    .section-title h2 {
+        font-size: 20px;
+    }
+
+    .user-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .room-select {
+        max-width: 100%;
+    }
+
+    .action-section {
+        justify-content: stretch;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .header {
+        padding: 18px 15px;
+    }
+
+    .header h1 {
+        font-size: 21px;
+    }
+
+    .header p {
+        font-size: 12px;
+    }
+
+    .main {
+        padding: 0 10px;
+        margin: 15px auto;
+    }
+
+    .user-section,
+    .room-section,
+    .inventory-section {
+        padding: 15px 12px;
+        border-radius: 10px;
+    }
+
+    .section-title h2 {
+        font-size: 18px;
+    }
+
+    .section-title p {
+        font-size: 13px;
+    }
+
+    .user-info p {
+        font-size: 13px;
+    }
+
+    .room-select select {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .inventory-table {
+        border-radius: 6px;
+    }
+
+    th {
+        padding: 12px 10px;
+        font-size: 12px;
+    }
+
+    td {
+        padding: 12px 10px;
+        font-size: 12px;
+    }
+
+    td input[type="number"] {
+        width: 75px;
+        padding: 10px 5px;
+        font-size: 14px;
+    }
+
+    .status {
+        font-size: 11px;
+        padding: 5px 9px;
+    }
+
+    .notes-section textarea {
+        font-size: 14px;
+    }
+
+    .submit-btn {
+        padding: 14px;
+        font-size: 14px;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+
+}
+
+
+/* ============================= / / Mobile Responsive / / ============================= */
+@media (max-width: 768px) {
+.main {
+    padding: 20px 12px;
+}
+
+.header {
+    padding: 25px 15px;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+.header p {
+    font-size: 14px;
+}
+
+.user-section,
+.room-section,
+.inventory-section {
+    padding: 18px 12px;
+}
+
+.section-title h2 {
+    font-size: 20px;
+}
+
+.section-title p {
+    font-size: 13px;
+}
+
+.room-select {
+    width: 100%;
+}
+
+.room-select select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+}
+
+/* Table scroll */
+.inventory-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.inventory-table table {
+    min-width: 650px;
+}
+
+.inventory-table th,
+.inventory-table td {
+    padding: 10px 8px;
+    font-size: 14px;
+}
+
+.inventory-table input {
+    width: 70px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.notes-section textarea {
+    width: 100%;
+    font-size: 15px;
+}
+
+.action-section {
+    margin-top: 20px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+}
+
+.footer {
+    padding: 20px 10px;
+    font-size: 13px;
+}
+}
